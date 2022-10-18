@@ -29,15 +29,13 @@ int print_char(va_list types, char buffer[],
 	while (num > 0)
 	{
 		buffer[i--] = (num % 10) + '0';
-		num /= 10;		
+		num /= 10;
 	}
-	
 	i++;
-	
-	return (write_unsigned(0, i, buffer, flags, width, precision, size));
+	return (write_unsgnd(0, i, buffer, flags, width, precision, size));
 }
 
-/************************* PRINT UNSIGNED NUMBER IN OCTAL *************************/
+/*************** PRINT UNSIGNED NUMBER IN OCTAL *******************/
 /**
  * print_string - Prints a string
  * @types: List a of arguments
